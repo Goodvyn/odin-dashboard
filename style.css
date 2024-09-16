@@ -2,17 +2,167 @@
   Josh's Custom CSS Reset
   https://www.joshwcomeau.com/css/custom-css-reset/
 */
+
+@font-face {
+    font-family: 'robotoblack';
+    src: url('fonts/webfontkit-20240915-162918/roboto-black-webfont.woff2') format('woff2'),
+        url('fonts/webfontkit-20240915-162918/roboto-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'robotoblack_italic';
+    src: url('fonts/webfontkit-20240915-162918/roboto-blackitalic-webfont.woff2') format('woff2'),
+        url('fonts/webfontkit-20240915-162918/roboto-blackitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'robotobold';
+    src: url('fonts/webfontkit-20240915-162918/roboto-bold-webfont.woff2') format('woff2'),
+        url('fonts/webfontkit-20240915-162918/roboto-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'robotobold_italic';
+    src: url('fonts/webfontkit-20240915-162918/roboto-bolditalic-webfont.woff2') format('woff2'),
+        url('fonts/webfontkit-20240915-162918/roboto-bolditalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'robotoitalic';
+    src: url('fonts/webfontkit-20240915-162918/roboto-italic-webfont.woff2') format('woff2'),
+        url('fonts/webfontkit-20240915-162918/roboto-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'robotolight';
+    src: url('fonts/webfontkit-20240915-162918/roboto-light-webfont.woff2') format('woff2'),
+        url('fonts/webfontkit-20240915-162918/roboto-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'robotolight_italic';
+    src: url('fonts/webfontkit-20240915-162918/roboto-lightitalic-webfont.woff2') format('woff2'),
+        url('fonts/webfontkit-20240915-162918/roboto-lightitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'robotomedium';
+    src: url('fonts/webfontkit-20240915-162918/roboto-medium-webfont.woff2') format('woff2'),
+        url('fonts/webfontkit-20240915-162918/roboto-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'robotomedium_italic';
+    src: url('fonts/webfontkit-20240915-162918/roboto-mediumitalic-webfont.woff2') format('woff2'),
+        url('fonts/webfontkit-20240915-162918/roboto-mediumitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url('fonts/webfontkit-20240915-162918/roboto-regular-webfont.woff2') format('woff2'),
+        url('fonts/webfontkit-20240915-162918/roboto-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'robotothin';
+    src: url('fonts/webfontkit-20240915-162918/roboto-thin-webfont.woff2') format('woff2'),
+        url('fonts/webfontkit-20240915-162918/roboto-thin-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'robotothin_italic';
+    src: url('fonts/webfontkit-20240915-162918/roboto-thinitalic-webfont.woff2') format('woff2'),
+        url('roboto-thinitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 *, *::before, *::after {
     box-sizing: border-box;
 }
 
 * {
     margin: 0;
+    padding: 0;
 }
 
 body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+    height: inherit;
+    font-family: "robotoregular", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html {
+    font-size: 16px;
+    height: 100%;
 }
 
 img, picture, video, canvas, svg {
@@ -30,4 +180,134 @@ p, h1, h2, h3, h4, h5, h6 {
 
 #root, #__next {
     isolation: isolate;
+}
+
+:root {
+    --dark-blue: #498fd0;
+    --white: #ffffff;
+    --grey-background: #e2e7ef;
+    --orange-accent: #e6b53e;
+    --grey-text: #636363;
+    --black-icons: #363636;
+    --black-text: #000000;
+}
+
+.nav * {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.dashboard-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    min-height: 100%;
+}
+
+.sidebar {
+
+    display: grid;
+    grid-template-rows: min-content min-content;
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+    gap: 3rem;
+
+    padding: 1em;
+    background-color: var(--dark-blue);
+    color: var(--white);
+    font-family: 'robotobold';
+}
+
+.sidebar a {
+    color: var(--white);
+}
+
+.logo {
+    font-size: calc(1.5rem + 4px);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-icon {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background-size: cover;
+}
+
+
+.nav {
+    font-size: calc(1rem + 4px);
+    display: grid;
+    grid-auto-rows: min-content;
+    gap: 4rem;
+}
+
+.nav ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1em;
+
+}
+
+.nav a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+    min-width: 100%;
+}
+
+.nav .nav-icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-size: cover;
+    filter: invert(100%);
+}
+
+
+
+.logo-icon {
+    background-image: url("images/icons/logo-icon.svg");
+}
+
+.home-icon {
+    background-image: url("images/icons/home.svg");
+}
+
+.profile-icon {
+    background-image: url("images/icons/card-account-details-outline.svg");
+}
+
+.messages-icon {
+    background-image: url("images/icons/message-reply.svg");
+}
+
+.history-icon {
+    background-image: url("images/icons/clock-time-three.svg");
+}
+
+.tasks-icon {
+    background-image: url("images/icons/file-multiple.svg");
+}
+
+.communities-icon {
+    background-image: url("images/icons/account-group.svg");
+}
+
+.settings-icon {
+    background-image: url("images/icons/cog.svg");
+}
+
+.support-icon {
+    background-image: url("images/icons/help-box.svg");
+}
+
+.privacy-icon {
+    background-image: url("images/icons/shield-check.svg");
+}
+
+.content {
+    grid-column: 2 / 3;
 }
