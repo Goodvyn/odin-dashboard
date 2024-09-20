@@ -517,6 +517,7 @@ p, h1, h2, h3, h4, h5, h6 {
 .announcement-content {
     padding: 0 0.5em 1.5em;
     border-bottom: 2px solid var(--grey-divider);
+    cursor: pointer;
 }
 
 .announcement-content:last-child {
@@ -556,6 +557,7 @@ p, h1, h2, h3, h4, h5, h6 {
     grid-template-columns: max-content 1fr;
     gap: 1em;
     align-items: center;
+    cursor: pointer;
 }
 
 .trending-user-wrapper img {
