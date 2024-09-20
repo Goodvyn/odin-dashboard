@@ -184,13 +184,14 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 :root {
-    --dark-blue: #498fd0;
     --white: #ffffff;
-    --grey-background: #e2e7ef;
-    --orange-accent: #e6b53e;
-    --grey-text: #636363;
     --black-icons: #363636;
     --black-text: #000000;
+    --dark-blue: #498fd0;
+    --orange-accent: #e6b53e;
+    --grey-text: #636363;
+    --grey-divider: #d1d1d1;
+    --grey-background: #e2e7ef;
 }
 
 .nav * {
@@ -412,7 +413,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .main-content {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 1fr;
     gap: 2em;
     padding: 2em 1.5em;
     width: 100%;
@@ -427,16 +428,19 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .side-content {
     grid-column: 2;
+    display: grid;
+    grid-template-rows: min-content;
+    gap: 2em;
 }
 
 .section-title {
     font-family: "robotomedium";
-    font-size: 1.2em;
+    font-size: 1.5em;
+    padding-bottom: 0.5em;
 }
 
 .section-title.projects {
     grid-column: 1 / 2;
-    padding-bottom: 0.5em;
 }
 
 .projects-wrapper {
@@ -459,8 +463,13 @@ p, h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
 
     background-color: var(--white);
-    border-radius: 16px;
+    border-radius: 8px;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.project-card h2 {
+    font-size: 1.3em;
+    font-family: "robotomedium";
 }
 
 .project-card p {
@@ -492,6 +501,74 @@ p, h1, h2, h3, h4, h5, h6 {
     background-repeat: no-repeat;
     cursor: pointer;
     filter: invert(15%) sepia(0%) saturate(0%) hue-rotate(218deg) brightness(92%) contrast(79%);
+}
+
+.announcement-card {
+    display: grid;
+    padding: 2em;
+    gap: 1em;
+    max-width: 400px;
+    grid-template-columns: minmax(250px, 1fr);
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.announcement-content {
+    padding: 0 0.5em 1.5em;
+    border-bottom: 2px solid var(--grey-divider);
+}
+
+.announcement-content:last-child {
+    border: 0px;
+    padding-bottom: 0.5em;
+}
+
+.announcement-content h2 {
+    font-size: 1em;
+    font-family: "robotomedium";
+}
+
+.announcement-content p {
+    display: block;
+    position: relative;
+    font-size: 0.8em;
+    color: var(--grey-text);
+    max-height: calc(3 * 1.5em);
+    line-height: 1.2;
+    overflow: hidden;
+}
+
+
+.trending-card {
+    display: grid;
+    padding: 2em;
+    gap: 2em;
+    max-width: 400px;
+    grid-template-columns: minmax(250px, 1fr);
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.trending-user-wrapper {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 1em;
+    align-items: center;
+}
+
+.trending-user-wrapper img {
+    width: 3.5em;
+}
+
+
+.trending-card p:first-child {
+    font-family: "robotomedium";
+}
+
+.trending-card p:nth-child(2) {
+    color: var(--grey-text);
 }
 
 .fav.icon {
